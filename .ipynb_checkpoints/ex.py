@@ -41,7 +41,8 @@ categoria = input('Entre com o nome da categoria do produto: ')
 nomeProduto = input('Entre com o nome do produto desejado: ')
 qtEstoqueAtual = input('Entre com a quantidade existente em estoque: ')
 
-if nomeProduto and categoria and int(qtEstoqueAtual):
+if nomeProduto and categoria and qtEstoqueAtual:
+        qtEstoqueAtual = int(qtEstoqueAtual)
         if categoria == 'bebidas':
             if int(qtEstoqueAtual) < 75:
                 print('Solicitar {} à equipe de compras, temos apenas {} unidades em estoque'.format(nomeProduto, qtEstoqueAtual))
@@ -59,8 +60,6 @@ if nomeProduto and categoria and int(qtEstoqueAtual):
                 print('Solicitar {} à equipe de compras, temos apenas {} unidades em estoque'.format(nomeProduto, qtEstoqueAtual))
             else:
                 print('Temos estoque suficiente!')
-
-
 else:
     print('Categoria não cadastrada, valor inexistente ou campo em branco, favor digitar corretamente!')
     
